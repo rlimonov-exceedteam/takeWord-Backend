@@ -6,7 +6,7 @@ const app = express();
 
 const apiRoutes = require('./src/modules/routes/routes');
 
-const dbUrl = 'mongodb+srv://romanphilimon95:695v89eqbhh4hy9FTK2S@to-do-list.ebsb2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const dbUrl = 'mongodb+srv://timmyhurtful:restart987@cluster0.qiabf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const PORT = 8000;
 
 try {
