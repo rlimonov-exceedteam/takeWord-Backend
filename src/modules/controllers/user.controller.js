@@ -5,12 +5,12 @@ module.exports.createNewUser = async (req, res) => {
     const { login, password } = req.body;
     const userData = await userService.registration(login, password);
     res.cookie('refreshToken', userData.refreshToken, {
-      maxAge: 155520000000,
+      maxAge: 1000 * 60 * 60 * 24 * 30,
       httpOnly: true
     });
 
     return res.json(userData);
-  } catch(e) {
-    res.status(400).send({message: e.message});
+  } catch (e) {
+    res.status(400).send({ message: e.message });
   }
 }

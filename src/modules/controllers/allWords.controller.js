@@ -30,7 +30,7 @@ module.exports.getRandomWord = async (req, res) => {
         const index = Math.floor(Math.random() * allWords.words.length);
         const randomWord = allWords.words[index];
         const randomTransl = allWords.translations[index];
-        
+
         res.status(200).send({
             word: randomWord,
             translation: randomTransl,
@@ -55,7 +55,7 @@ module.exports.handleStudiedWord = async (req, res) => {
         const translations = allWords.translations.filter(t => t !== reqTransl);
 
         if ((words.length === allWords.words.length)
-        || translations.length === allWords.translations.length) {
+            || translations.length === allWords.translations.length) {
             return res.status(500).send({ message: 'the word or the translation is not found' });
         }
 
